@@ -57,9 +57,6 @@ Vagrant.configure("2") do |config|
     rm -f get-pip.py
     # install aws-cli
     pip install awscli --upgrade
-    # reboot if needed
-    needs-restarting -r
-    if [ "$?" -eq 1 ]; then reboot; fi
   SHELL
   config.vm.provision :reload
 end
